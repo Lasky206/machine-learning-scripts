@@ -50,13 +50,25 @@ I = [
 
 def inversion(matrix):
     counter = 0
-
+    Am = matrix
+    Im = [
+    [1, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1]
+    ]
     for i in range(len(A)):
-        tmp = []
+        tmpA = []
+        tmpI = []
         row = A[counter]
         column = row[counter]
         for num in A[0]:
-            tmp.append(num/column)
+            tmpA.append(num/column)
+        for num in I[0]:
+            tmpI.append(num/column)
+        for num in range(len(tmpA)):
+            tmpA*3
 
 
 inversion(A)
