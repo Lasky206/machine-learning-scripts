@@ -22,53 +22,13 @@ I = [
 ]
 
 
-# #lets invert
-# def inversion(matrix):
-#     #morphing matracies
-#     Am = []
-#     Im = []
-#     #xy axis counters
-#     counter = 0
-#     for row in matrix:
-#         focus = row[counter]
-#         rowph = []
-#         sub = []
-#         for column in row:
-#             rowph.append(column/focus)
-#             sub.append(column*3)
-#         Am.append(rowph)
-#     for row in Am:
-#         print(row)
-#     for row in Im:
-#         print(row)
-#
-#
-# inversion(A)
-
-
-#printmatrix(matrixA)
-
-def inversion(matrix):
+def main(A, I):
+    Am = A
+    Im = I
     counter = 0
-    Am = matrix
-    Im = [
-    [1, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 1]
-    ]
-    for i in range(len(A)):
-        tmpA = []
-        tmpI = []
-        row = A[counter]
-        column = row[counter]
-        for num in A[0]:
-            tmpA.append(num/column)
-        for num in I[0]:
-            tmpI.append(num/column)
-        for num in range(len(tmpA)):
-            tmpA*3
 
+    for i in Am:
+        for j in i:
+            print(j)
 
-inversion(A)
+main(A, I)
