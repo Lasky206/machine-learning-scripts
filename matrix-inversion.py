@@ -1,5 +1,5 @@
 def printmatrix(matrix):
-    for line in matrix.values():
+    for line in matrix:
         print(line)
 
 
@@ -25,10 +25,17 @@ I = [
 def main(A, I):
     Am = A
     Im = I
+    tmpA = []
+    tmpI = []
     counter = 0
 
     for i in Am:
         for j in i:
-            print(j)
+            tmpA.append(j/i[counter])
+        Am[counter] = tmpA
+        tmpA = []
+        counter += 1
+    printmatrix(Am)
+        # print('-----')
 
 main(A, I)
