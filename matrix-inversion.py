@@ -44,31 +44,8 @@ def main(A, I):
     counter = 0
     iterate = 0
 
-    for i, ii in zip(Am, Im):
-        for j in i:
-            tmpA.append(j/i[counter])
-        for j in ii:
-            tmpI.append(j/i[counter])
-        Am[counter] = tmpA
-        Im[counter] = tmpI
+    for i in list(range(len(Am)))[:counter] + list(range(len(Am)))[counter+1:]:
+        print(Am[i][counter])
 
-        print('#############################') #USED YOUR HELP FOR THIS PART HERE
-        for j in list(range(len(Am)))[:counter] + list(range(len(Am)))[counter+1:]:
-            #END OF HELP
-            var = Am[j][counter]
-            for k in Am[j]:
-                print(k - var * Am[counter])
-
-
-
-        print('#############################')
-
-        tmpA = []
-        tmpI = []
-        counter += 1
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    printmatrix(Am)
-    print('---------------------------------------------')
-    printmatrix(Im)
 
 main(A, I)
