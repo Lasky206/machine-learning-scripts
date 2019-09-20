@@ -35,26 +35,8 @@ I = [
 [0, 0, 1]
 ]
 
+
 def main(A, I):
-    Am = A
-    Im = I
-    tmpA = []
-    tmpI = []
-    counter = 0
-
-    for i in Am:
-        for j in i:
-            tmpA.append(j/i[counter])
-        Am[counter] = tmpA
-        tmpA = []
-        counter += 1
-    printmatrix(Am)
-        # print('-----')
-
-# main(A, I)
-
-
-def main2(A, I):
     Am = A
     Im = I
     tmpA = []
@@ -70,11 +52,15 @@ def main2(A, I):
         Am[counter] = tmpA
         Im[counter] = tmpI
 
-        print('#############################')
-        print(Am[counter+0])
-        for j in range(len(Am)):
-            tmp = Am[j]
-            print(tmp[0])
+        print('#############################') #USED YOUR HELP FOR THIS PART HERE
+        for j in list(range(len(Am)))[:counter] + list(range(len(Am)))[counter+1:]:
+            #END OF HELP
+            var = Am[j][counter]
+            for k in Am[j]:
+                print(k - var * Am[counter])
+
+
+
         print('#############################')
 
         tmpA = []
@@ -85,4 +71,4 @@ def main2(A, I):
     print('---------------------------------------------')
     printmatrix(Im)
 
-main2(A, I)
+main(A, I)
