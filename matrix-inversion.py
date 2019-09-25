@@ -3,7 +3,7 @@ def printmatrix(matrix):
         print(line)
 
 
-matrix A
+#matrix A
 A = [
 [5, 4, 3, 2, 1],
 [4, 3, 2, 1 ,5],
@@ -12,7 +12,7 @@ A = [
 [1, 2, 3, 4, 5]
 ]
 
-matrix I
+#matrix I
 I = [
 [1, 0, 0, 0, 0],
 [0, 1, 0, 0, 0],
