@@ -151,6 +151,9 @@ def check_matrices(matrix_A, matrix_B):
 #
 #     return new
 
+def unitize_vector(vector):
+    print()
+
 # #determinate of matrix
 # def determinant_fast(A):
 #     # Section 1: Establish n parameter and copy A
@@ -175,3 +178,17 @@ def check_matrices(matrix_A, matrix_B):
 #         product *= AM[i][i]
 #
 #     return product
+
+def determinant(matrix_A):
+    Am = copy_matrix(matrix_A)
+    for i in range(len(matrix_A)):
+        for j in range(i+1,len(matrix_A)):
+            if Am[i][i] == 0:
+                Am[i][i] == 1.0e-18
+            crScaler = Am[j][i] / Am[i][i]
+            for k in range(len(matrix_A)):
+                Am[j][k] = Am[j][k] - crScaler * Am[i][k]
+    product = 1.0
+    for i in range(len(matrix_A)):
+        product *= Am[i][i]
+    return product
